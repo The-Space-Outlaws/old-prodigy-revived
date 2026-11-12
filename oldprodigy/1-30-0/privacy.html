@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Old Prodigy Revival</title>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet">
+<style>
+  body { background:#0e0b16; color:#eee; font-family:'Ubuntu',sans-serif; margin:0; line-height:1.55; }
+  .wrap { max-width:860px; margin:0 auto; padding:32px 20px 80px; }
+  h1 { color:#f8981d; margin-bottom:4px; }
+  h2 { color:#f8b84d; margin-top:28px; font-size:1.15rem; }
+  .disclaimer { border:1px solid #f8981d; background:rgba(248,152,29,.08); padding:12px 16px; border-radius:8px; margin:18px 0; }
+  a { color:#f8b84d; }
+  .nav { font-size:.85rem; opacity:.8; margin-bottom:8px; }
+  .eff { opacity:.6; font-size:.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav"><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="licenses.html">Open Source Licenses</a></div>
+  <h1>Privacy Policy</h1>
+  <p class="eff">Old Prodigy Revival · Effective November 12, 2026</p>
+
+  <div class="disclaimer">
+    <strong>Old Prodigy Revival is an independent, unofficial fan project.</strong> It is NOT affiliated with, endorsed by,
+    or connected to Prodigy Education Inc. We do not send your personal information to the original Prodigy service.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>"We", "us", and "the project" refer to the Old Prodigy Revival project and its contributors.
+     Questions or requests about this policy can be sent via
+     <a href="https://github.com/The-Space-Outlaws/old-prodigy-revived/issues" target="_blank" rel="noopener">our public issue tracker</a>.
+     Do not post passwords or private data in public issues.</p>
+
+  <h2>2. Age requirement</h2>
+  <p>This service is for users <strong>13 years of age or older</strong>. We do not knowingly collect personal information from children under 13.
+     If you believe an under-13 child created an account, contact us and we will delete the account and all associated cloud data.</p>
+
+  <h2>3. What we collect and why</h2>
+  <table style="width:100%; border-collapse:collapse;" border="1" cellpadding="6">
+    <thead><tr><th align="left">Data</th><th align="left">Where it lives</th><th align="left">Why we have it</th></tr></thead>
+    <tbody>
+      <tr><td>Email address &amp; password (hashed by Firebase)</td><td>Google Firebase Authentication (<code>classdigy</code> project)</td><td>Sign-in and account recovery</td></tr>
+      <tr><td>Game save (character, progress, settings, inventory, etc.)</td><td>Google Firestore — <code>saves/{your-uid}</code></td><td>Cloud saves so you can play online and on other devices</td></tr>
+      <tr><td>Membership flag</td><td>Google Firestore — <code>players/{your-uid}</code></td><td>Free member benefits synced with your account</td></tr>
+      <tr><td>Username &amp; display name</td><td>Google Firestore — <code>players/{your-uid}</code> and <code>usernames/{handle}</code></td><td>Signing in with a username; showing your wizard's name online</td></tr>
+      <tr><td>Username cookie &amp; local save copy</td><td>Your browser (cookie + <code>localStorage</code>)</td><td>Convenience: remembering you and for offline play</td></tr>
+      <tr><td>Standard network logs (IP, user agent)</td><td>Google/GitHub infrastructure serving the app and CDN SDKs</td><td>Connection delivery; we do not access or analyze these</td></tr>
+    </tbody>
+  </table>
+  <p>We do <strong>not</strong> collect analytics, advertising identifiers, precise location, contacts, or educational data from schools or parents.
+     There are no ads and no third-party trackers in this build.</p>
+
+  <h2>4. Usernames are public</h2>
+  <p>To let you sign in with a username instead of an email, the mapping from a username handle to an account email lives in a
+     <strong>publicly readable</strong> Firestore document (<code>usernames/{handle}</code>). That means anyone on the internet — not just
+     other players — can look up which email address a given username signs in with.</p>
+  <ul>
+    <li>Choose a username you are comfortable having paired publicly with your email address.</li>
+    <li>Don't use your real full name, home address, or anything else you wouldn't want strangers to see next to your email.</li>
+    <li>Your password and your save data are never public; only the handle→email mapping is.</li>
+    <li>Your wizard's name is your display name and syncs to your account when you rename. The username handle itself is chosen
+        at sign-up and doesn't change.</li>
+  </ul>
+
+  <h2>5. What we do NOT do</h2>
+  <ul>
+    <li>We do not sell, rent, or trade your personal information.</li>
+    <li>We do not send your login, saves, or personal data to the original Prodigy service or to any advertiser.</li>
+    <li>We do not build advertising profiles or run retargeting.</li>
+  </ul>
+
+  <h2>6. Service providers</h2>
+  <p>We use Google Firebase (Authentication and Firestore) to store accounts and saves, and Google/GitHub infrastructure and CDNs to serve
+     the site and its libraries. Their handling of data is governed by their respective privacy policies (Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>;
+     GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>).
+     These providers process data on our behalf and may process connection metadata (e.g., IP addresses) in the course of delivering the service.</p>
+
+  <h2>7. Cookies and local storage</h2>
+  <p>The original game client sets a <code>prodigyUsername</code> cookie, and this revival additionally stores your game saves in your browser's
+     <code>localStorage</code>. These stay on your device and are not transmitted except as described in Section 3 (e.g., saving to your cloud).
+     Clearing your browser data will remove the cookie and local saves — export important saves first
+     (Settings → Network → Save Character).</p>
+
+  <h2>8. Data retention</h2>
+  <p>Cloud data is kept for as long as your account exists. When you delete your account (next section), we delete:
+     your Firebase Authentication record, your <code>saves/{uid}</code> document, your <code>players/{uid}</code> document, and your <code>usernames/{handle}</code> document.
+     Copies of any data already downloaded by you, or cached by Google as part of normal infrastructure operation (backups), may persist for a limited time
+     under the providers' retention schedules; we cannot control those.</p>
+
+  <h2>9. Deleting your account and data</h2>
+  <p>You can delete your account yourself, at any time, no questions asked:</p>
+  <ol>
+    <li>Open the game and sign in.</li>
+    <li>Open <strong>Settings → Network → Delete Account</strong>.</li>
+    <li>Confirm twice and re-enter your password.</li>
+  </ol>
+  <p>This permanently removes your account and its cloud saves. Alternatively, open a privacy request issue on our
+     <a href="https://github.com/The-Space-Outlaws/old-prodigy-revived/issues" target="_blank" rel="noopener">issue tracker</a> and a maintainer will remove it for you.</p>
+  <p>Deleting your account does not delete your <em>local</em> browser saves — those stay on your device and are yours to remove.</p>
+
+  <h2>10. Your rights</h2>
+  <p>Depending on where you live (e.g., GDPR/UK GDPR, CCPA/CPRA, or similar), you may have rights to access, correct, export, or erase your personal data:</p>
+  <ul>
+    <li><strong>Access &amp; portability:</strong> plays your saves anywhere you log in; export a full copy anytime via Settings → Network → Save Character (JSON download).</li>
+    <li><strong>Correction:</strong> edit your in-game character, or request correction via the issue tracker.</li>
+    <li><strong>Erasure:</strong> Settings → Network → Delete Account, or via the issue tracker.</li>
+    <li><strong>Objection/restriction:</strong> stop using the service; delete your account as above.</li>
+  </ul>
+
+  <h2>11. Security</h2>
+  <p>Passwords are handled by Firebase Authentication (hashed/salted) and are never visible to us. Cloud access is restricted by owner-only
+     Firestore security rules, so only your account can read or write your documents. No system is perfectly secure; use a strong, unique password
+     and do not share it.</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>We may update this policy from time to time. The effective date above will change accordingly.
+     Continued use of the service after an update constitutes acceptance of the revised policy.</p>
+
+  <h2>13. Contact</h2>
+  <p>Privacy questions, access/deletion requests, or parent/guardian concerns:
+     <a href="https://github.com/The-Space-Outlaws/old-prodigy-revived/issues" target="_blank" rel="noopener">github.com/The-Space-Outlaws/old-prodigy-revived/issues</a>
+     (label the issue <code>privacy</code>).</p>
+</div>
+</body>
+</html>

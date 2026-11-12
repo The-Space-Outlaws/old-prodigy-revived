@@ -1,0 +1,19 @@
+{
+  "name": "old-prodigy-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multiplayer relay for Prodigy Rewritten (oldprodigy/1-30-0). socket.io 1.x server compatible with the bundled socket.io-1.3.5 client, Firebase ID-token auth, world list, presence, targeted PVP message routing, matchmaking and PvP leaderboards.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.3.0",
+    "firebase-admin": "14.5.1",
+    "socket.io": "1.7.4"
+  }
+}

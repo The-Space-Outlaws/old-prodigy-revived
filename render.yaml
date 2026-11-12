@@ -1,0 +1,20 @@
+# Render blueprint for the Prodigy Rewritten multiplayer relay.
+# Deploy: Render dashboard → New → Blueprint → this repo, or create a
+# Web Service manually with rootDir=server, build="npm install", start="npm start".
+# Then set FIREBASE_SERVICE_ACCOUNT in the service's Environment (see server/README.md).
+services:
+  - type: web
+    name: old-prodigy-relay
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /status
+    envVars:
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false          # paste the service-account JSON here in the Render dashboard
+      - key: WORLD_COUNT
+        value: "20"
+      - key: WORLD_CAPACITY
+        value: "100"

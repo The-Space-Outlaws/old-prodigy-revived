@@ -25,3 +25,13 @@ your part was just as important <3
   
 ## ❗️Mini Disclaimer❗️
 We do **not** own the assets but we are making fan versions of old prodigy!
+
+## ⚖️ Legal
+
+Old Prodigy Revival is an **unofficial fan project** and is **not affiliated with, endorsed by, or sponsored by Prodigy Education Inc.** "Prodigy" and "Prodigy Math Game" are property of Prodigy Education Inc.
+
+- [Terms of Service](oldprodigy/1-30-0/terms.html) — 13+ requirement, acceptable use, no warranty
+- [Privacy Policy](oldprodigy/1-30-0/privacy.html) — what we collect (Firebase account + saves), your rights, account deletion
+- [Open Source Licenses](oldprodigy/1-30-0/licenses.html) — third-party libraries (MIT / Apache-2.0); note: **this project itself currently has no open-source license** (all rights reserved until one is added)
+
+Questions or takedown requests: open an issue on this repository.
